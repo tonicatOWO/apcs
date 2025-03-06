@@ -33,11 +33,10 @@ int main() {
       
       sum -= t[i][j];
             
-      cout << (sum % 2 == 1) ? !mp[i][j] : mp[i][j]; << " ";
+      cout << ((sum % 2 == 1) ? !mp[i][j] : mp[i][j]) << " ";
     }
     cout << endl;
   }
    
   return 0;
 }
-
