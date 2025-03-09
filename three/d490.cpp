@@ -1,15 +1,12 @@
 #include <iostream>
 using namespace std;
 
-long long S(long long x) {
-    long long k = x / 2;    
-    return k * (k + 1);
-}
-
 int main() {
-    long long L, R;
+    unsigned long long  L, R;
     cin >> L >> R;
-    cout << S(R) - S(L - 1) << endl;
+    int t = (((L+1)/2)*2+((R/2)*2))*0.5*((R-L)+(L%2==0)+(R%2==0))/2;
+    std::cout << t << endl;
     return 0;
 }
+
 
