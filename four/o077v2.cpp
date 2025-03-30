@@ -1,28 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int pic[100][100]={0};
+int pic[100][100] = {0};
 
-int main() {
+int main(){
     int h, w, n;
     cin >> h >> w >> n;
-
-    while (n--) {
+    while(n--){
         int r, c, t, x;
-        cin >> r >>c >>t >>x;
-        for (int j = 0; j < h; j++) {
-            for (int l = 0; l < w; l++) {
-                if (abs(j - r) + abs(l - c) <= t) {
-                    pic[j][l] += x;
+        cin >> r >> c >> t >> x;
+        for (int i = 0; i < h; i++){
+            for (int j = 0; j < w; j++){
+                if (abs(i - r) + abs(j - c) <= t){
+                    pic[i][j] += x;
                 }
             }
         }
     }
-    for (int j = 0; j < n; j++) {
-        for (int l = 0; l < w; l++) {
-            cout << pic[j][l] << ' ';
+    for (int i = 0; i < h; i++){
+        for (int j = 0; j < w; j++){
+            cout << pic[i][j] << " ";
         }
-        cout << endl;
+        cout << "\n";
     }
+    return 0;
 }
 
