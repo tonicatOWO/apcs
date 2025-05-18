@@ -32,5 +32,6 @@ int main() {
       s=s.substr(n/2+1,n/2) + s[n/2]+s.substr(0,n/2);
     }
   }
+
   cout << s << "\n";
 }
