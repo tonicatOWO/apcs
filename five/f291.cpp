@@ -9,7 +9,6 @@ int main() {
   while (i < cell.length() && isalpha(cell[i])) {
     i++;
   }
-
   string colStr = cell.substr(0, i);
   int row = stoi(cell.substr(i));
 
