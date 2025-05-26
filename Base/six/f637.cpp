@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 
 int dfs(const std::string& S, int n, size_t& pos) {
     if (S[pos] == '0') {
