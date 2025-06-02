@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Sculpture {
-  int height, weight, original_pos;
+struct statue {
+  int h, w, original_pos;
 
-  bool operator<(const Sculpture &other) const {
-    return tie(height, weight, original_pos) <
-           tie(other.height, other.weight, other.original_pos);
+  bool operator<(const statue &other) const {
+    return tie(h, w, original_pos) <
+           tie(other.h, other.w, other.original_pos);
   }
 };
 
@@ -16,21 +16,21 @@ int main() {
 
   int n;
   cin >> n;
-  vector<Sculpture> sculptures(n);
+  vector<statue> sculptures(n);
 
   for (int i = 0; i < n; i++) {
-    cin >> sculptures[i].height >> sculptures[i].weight;
+    cin >> sculptures[i].h >> sculptures[i].w;
     sculptures[i].original_pos = i;
   }
 
   sort(sculptures.begin(), sculptures.end());
 
-  int total_distance = 0;
+  int total = 0;
   for (int i = 0; i < n; i++) {
-    total_distance += abs(sculptures[i].original_pos - i);
+    total += abs(sculptures[i].original_pos - i);
   }
 
-  cout << total_distance << endl;
+  cout << total << "\n";
 
   return 0;
 }

@@ -14,7 +14,6 @@ int main() {
   for (int i = 0; i < n; ++i) {
     cin >> numbers[i];
   }
-
   sort(numbers.begin(), numbers.end(), [](int a, int b) {
     int lastA = a % 10, lastB = b % 10;
     return lastA == lastB ? a > b : lastA < lastB;
