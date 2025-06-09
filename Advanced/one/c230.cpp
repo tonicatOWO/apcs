@@ -20,15 +20,15 @@ int main() {
     sort(trees.begin(), trees.end(),
          [](const Tree &a, const Tree &b) { return a.x + a.y < b.x + b.y; });
 
-    int max_height = -1;
-    int max_diff = -1;
+    int maxHeight = -1;
+    int maxDiff = -1;
 
     for (int i = 0; i < n; i++) {
-      max_diff = max(max_height - trees[i].h, max_diff);
-      max_height = max(max_height, trees[i].h);
+      maxDiff = max(maxHeight - trees[i].h, maxDiff);
+      maxHeight = max(maxHeight, trees[i].h);
     }
 
-    cout << max_diff << endl;
+    cout << maxDiff << endl;
   }
   return 0;
 }
